@@ -1,0 +1,31 @@
+.barraSuperior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem var(--pdLateral);
+    border-bottom: 1px solid var(--borda);
+    height: var(--altBarraSuperior);
+}
+
+.barraSuperior__esquerda button {
+    background-color: transparent;
+}
+
+.barraSuperior__direita {
+    display: flex;
+    gap: 1rem;
+}
+
+.botoes {
+    height: 30px;
+    object-fit: contain;
+}
+
+.botoes.janela {
+    width: 10px;
+    cursor: pointer;
+}
+
+.botoes.janela.fechar:hover {
+    color: var(--vermelho);
+}

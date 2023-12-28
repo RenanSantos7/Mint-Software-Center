@@ -1,0 +1,42 @@
+.painelLateral {
+    width: 200px;
+    height: calc(100vh - var(--altBarraSuperior));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem var(--pdLateral);
+    background-color: var(--bgAside);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+li a {
+    display: flex;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+.superior {
+    overflow-y: auto;
+}
+
+.inferior {
+    border-top: 1px solid var(--borda);
+    padding-top: 1rem;
+}
+
+.inferior menu {
+    flex-direction: column-reverse;
+    gap: 1em;
+}
+
+.inferior li a {
+    white-space: nowrap;
+    max-width: 10rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
