@@ -1,0 +1,7 @@
+.corpo {
+    display: flex;
+}
+
+.corpo main {
+    padding: 1rem var(--pdLateral);
+}

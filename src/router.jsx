@@ -1,18 +1,22 @@
-import dadosApps from './data/apps.json'
+import appData from './data/apps'
 import Header from './components/Header/Header'
-import PaginaPadrao from './pages/PaginaPadrao/PaginaPadrao'
+import DefaultPage from './pages/DefaultPage/DefaultPage'
+import Explore from './pages/Explore'
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
-  const [apps, setApps] = useState(dadosApps)
+  const [apps, setApps] = useState(appData)
 
   return (
     <>
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path='/'element={<PaginaPadrao />} />
+          <Route path='/' element={<DefaultPage />}>
+            {/* <Route index element={<Home />} /> */}
+            <Route index element={<Explore apps={apps} />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

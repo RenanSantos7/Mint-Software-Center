@@ -1,0 +1,39 @@
+.appCard {
+    --tamanho: 200px;
+    display: flex;
+    gap: .75rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--borda);
+    background-color: var(--bgCard);
+    border-radius: 24px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.appCard:hover {
+    background-color: var(--bgGeral);
+}
+
+.appCard img {
+    height: 40%;
+    object-fit: contain;
+}
+
+.appCard h3, 
+.appCard p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 85%;
+    text-align: center;
+}
+
+.appCard h3 {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.appCard p {
+    font-size: 13px;
+    line-height: 1.25;
+}

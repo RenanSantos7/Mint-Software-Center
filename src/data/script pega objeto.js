@@ -38,7 +38,7 @@ function pegaInfosApp() {
 	const installedSize = elinfo ? elinfo[0].textContent : ''
 	const downloadSize = elinfo ? elinfo[1].textContent : ''
 	const arch = elinfo ? elinfo[2].textContent : ''
-	const downloadNumber = elinfo ? elinfo[3].textContent : ''
+	const downloadNumber = elinfo ? elinfo[3].textContent.replaceAll('.', '') : ''
 
 	const eltags = document.querySelectorAll('.flex.gap-2.text-sm a')
 	const tags = eltags
@@ -47,7 +47,7 @@ function pegaInfosApp() {
 				.map(el => `"${el}"`)
 		: ''
 
-	const result = `{"id": "","name": "${name}","developer": "${developer}","verified": false,"icon": "${icon}","screenshots": [${screenshots}],"description": "${description}","changelog": "<ul>${changelog}</ul>","downloadSize" : "${downloadSize}","installedSize": "${installedSize}","arch": "${arch}","downloadNumber": "${downloadNumber}","tags": [${tags}]}`
+	const result = `{"id": "","name": "${name}","developer": "${developer}","verified": false,"icon": "${icon}","screenshots": [${screenshots}],"shortDescription":"","description": "${description}","changelog": "<ul>${changelog}</ul>","downloadSize" : "${downloadSize}","installedSize": "${installedSize}","arch": "${arch}","downloadNumber": ${downloadNumber}","tags": [${tags}]}`
 
 	return result
 }
