@@ -1,7 +1,0 @@
-.cardContainer {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-    height: calc(100vh - var(--altBarraSuperior));
-    overflow: auto;
-}

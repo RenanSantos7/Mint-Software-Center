@@ -13,17 +13,20 @@ function pegaInfosApp() {
 	const elscreenshots = document.querySelector('.yarl__slide_image')
 	const screenshots = elscreenshots
 		? elscreenshots.srcset
-				.split(', ')
-				.map(img => img.replace(/ \d{3,4}w/, ''))
-				.map(img => `"${img}"`)
+			.split(', ')
+			.map(img => img.replace(/ \d{3,4}w/, ''))
+			.map(img => `"${img}"`)
 		: ''
 
 	const eldescription = document.querySelector('.col-start-2.flex.flex-col.gap-6 > div')
 	const description = eldescription
 		? eldescription.innerHTML
-				.toString()
-				.replaceAll(/ class="[^"]*"/g, '')
-				.replaceAll(/"/g, '&quot;')
+			.toString()
+			.replaceAll(/ class="[^"]*"/g, '')
+			.replaceAll(/"/g, '&quot;')
+		: ''
+	const shortDescription = eldescription
+		? eldescription.querySelector('h2').textContent
 		: ''
 
 	const elchangelog = document.querySelector('.rounded-xl ul')
@@ -47,7 +50,7 @@ function pegaInfosApp() {
 				.map(el => `"${el}"`)
 		: ''
 
-	const result = `{"id": "","name": "${name}","developer": "${developer}","verified": false,"icon": "${icon}","screenshots": [${screenshots}],"shortDescription":"","description": "${description}","changelog": "<ul>${changelog}</ul>","downloadSize" : "${downloadSize}","installedSize": "${installedSize}","arch": "${arch}","downloadNumber": ${downloadNumber}","tags": [${tags}]}`
+	const result = `{id: ,name: "${name}",developer: "${developer}",icon: "${icon}",screenshots: [${screenshots}],shortDescription:"${shortDescription}",description: "${description}",changelog: "<ul>${changelog}</ul>",downloadSize : "${downloadSize}",installedSize: "${installedSize}",arch: "${arch}",downloadNumber: ${downloadNumber},tags: [${tags}],categories:[]},`
 
 	return result
 }

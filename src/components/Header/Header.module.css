@@ -3,7 +3,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem var(--pdLateral);
+    
+    background: var(--bgHeader);
     border-bottom: 1px solid var(--borda);
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: var(--altBarraSuperior);
 }
 
@@ -27,5 +34,5 @@
 }
 
 .botoes.janela.fechar:hover {
-    color: var(--vermelho);
+    color: var(--red);
 }

@@ -17,10 +17,10 @@ export default function PainelLateral() {
                     </li>
                     
                     <li>
-                        <a>
+                        <Link to='/'>
                             <FontAwesomeIcon icon={faStar} />
                             <span>Em Destaque</span>
-                        </a>
+                        </Link>
                     </li>
                     
                     <li>

@@ -22,8 +22,6 @@
 
 .appCard h3, 
 .appCard p {
-    overflow: hidden;
-    text-overflow: ellipsis;
     width: 85%;
     text-align: center;
 }
@@ -36,4 +34,5 @@
 .appCard p {
     font-size: 13px;
     line-height: 1.25;
+
 }

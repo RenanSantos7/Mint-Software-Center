@@ -1,0 +1,12 @@
+.defaultButton {
+    background-color: var(--accentColor);
+    color: white;
+    border-radius: .5rem;
+    padding: .6rem 1rem;
+    border-radius: 8px;
+    transition: all .6s ease;
+}
+
+.defaultButton:hover {
+    background-image: linear-gradient(145deg, #10101057, transparent);
+}

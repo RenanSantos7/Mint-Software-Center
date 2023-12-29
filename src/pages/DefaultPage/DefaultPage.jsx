@@ -8,6 +8,7 @@ export default function DefaultPage() {
             <PainelLateral />
             <main>
                 <Outlet />
+                <div className={styles.margem}></div>
             </main>
         </div>
     )

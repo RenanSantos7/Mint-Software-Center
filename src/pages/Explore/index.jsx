@@ -11,7 +11,7 @@ export default function Explore({ apps }) {
 
     return (
         <>
-            <div className={styles.cardContainer}>
+            <div className='cardContainer'>
                 {appsSorted.map(app => (
                     <Card key={app.id} app={app} />
                 ))}

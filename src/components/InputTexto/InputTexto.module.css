@@ -1,7 +1,7 @@
 .container {
     width: 100%;
     border-radius: 18px;
-    background-color: var(--bgCard);
+    background-color: var(--bgGeral);
     display: flex;
     align-items: center;
 }

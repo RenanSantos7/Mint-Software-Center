@@ -3,26 +3,31 @@
 :root {
     --bgGeral: #fafafa;
     --bgCard: #f0f0f0;
-    --bgAside: #303030;
+    --bgHeader: var(--bgCard);
+    --bgAside: #e7e7e7;
     --borda: #ededed;
-    --vermelho: #ff0000;
+    --accentColor: forestgreen;
+    --red: #ff0000;
 
     --texto: ;
     --titulo: ;
 
+    --asideWidth: 200px;
     --pdLateral: 18px;
-    --altBarraSuperior: 4rem;
+    --altBarraSuperior: 3rem;
 
     --fonte-corpo: system-ui, ui-sans-serif, "Noto Sans";
 }
+
 
 @media screen and (prefers-color-scheme: dark) {
     :root{
         --bgGeral: #2b2b2b;
         --bgCard: #505050;
+        --bgHeader: #3a3939;
         --bgAside: #303030;
         --borda: #151515;
-        --vermelho: #fa6b6b;
+        --red: #fa6b6b;
 
         --texto: #d8d8d8;
         --titulo: ;
@@ -45,4 +50,10 @@ menu, ul {
 
 a {
     cursor: pointer;
+}
+
+.cardContainer {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
