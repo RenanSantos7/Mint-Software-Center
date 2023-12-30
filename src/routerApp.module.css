@@ -1,3 +1,8 @@
+.appCorpo {
+    display: flex;
+    flex-direction: column;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -5,4 +10,11 @@ main {
     padding: 1rem var(--pdLateral) 2rem;
     margin-top: var(--altBarraSuperior);
     margin-left: var(--asideWidth);
+}
+
+.btnSwitcher {
+    position: fixed;
+    top: 1rem;
+    left: var(--pdLateral);
+    font-size: 2rem;
 }

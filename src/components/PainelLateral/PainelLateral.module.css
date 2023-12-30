@@ -1,13 +1,21 @@
 .painelLateral {
     width: var(--asideWidth);
+    height: calc(100vh);
+    padding: calc(var(--altBarraSuperior) + 1.5rem) var(--pdLateral) 1.5rem;
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1.5rem var(--pdLateral);
     background-color: var(--bgAside);
-    height: calc(100vh - var(--altBarraSuperior));
+    
     position: fixed;
-    top: var(--altBarraSuperior)
+    top: 0;
+    left: calc(-1.2 * var(--asideWidth));
+    transition: all .6s ease-in-out;
+}
+
+.shown {
+    left: 0;
 }
 
 .menu {

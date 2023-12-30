@@ -2,16 +2,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem var(--pdLateral);
+    padding: 2rem var(--pdLateral);
     z-index: 10;
-    
-    background: var(--bgHeader);
-    border-bottom: 1px solid var(--borda);
     
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: var(--asideWidth);
+    width: calc(100vw - var(--asideWidth) - var(--pdLateral));
     height: var(--altBarraSuperior);
 }
 
@@ -36,4 +33,9 @@
 
 .botoes.janela.fechar:hover {
     color: var(--red);
+}
+
+
+.btnSwitcher {
+    position: fixed;
 }

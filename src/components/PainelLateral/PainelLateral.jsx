@@ -1,12 +1,15 @@
 import styles from './PainelLateral.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBriefcase, faCircleInfo, faCode, faGamepad, faGear, faStar, faWrench } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faBriefcase, faCircleInfo, faCode, faGamepad, faGear, faStar, faWrench } from '@fortawesome/free-solid-svg-icons'
 import { faComment, faCompass } from '@fortawesome/free-regular-svg-icons'
 import { Link } from 'react-router-dom'
 
-export default function PainelLateral() {
+export default function PainelLateral({asideShow}) {
     return (
-        <aside className={styles.painelLateral}>
+        <aside className={`
+            ${styles.painelLateral}
+            ${asideShow ? styles.shown : ''}
+        `}>
             <nav>
                 <menu className={styles.menu}>
                     <li>
@@ -15,42 +18,42 @@ export default function PainelLateral() {
                             <span>Explorar</span>
                         </Link>
                     </li>
-                    
+
                     <li>
                         <Link to='/'>
                             <FontAwesomeIcon icon={faStar} />
                             <span>Em Destaque</span>
                         </Link>
                     </li>
-                    
+
                     <li>
                         <a>
                             <FontAwesomeIcon icon={faCode} />
                             <span>Desenvolvimento</span>
                         </a>
                     </li>
-                    
+
                     <li>
                         <a>
                             <FontAwesomeIcon icon={faBriefcase} />
                             <span>Produtividade</span>
                         </a>
                     </li>
-                    
+
                     <li>
                         <a>
                             <FontAwesomeIcon icon={faGamepad} />
                             <span>Jogos</span>
                         </a>
                     </li>
-                    
+
                     <li>
                         <a>
                             <FontAwesomeIcon icon={faStar} />
                             <span>Criação</span>
                         </a>
                     </li>
-                    
+
                     <li>
                         <a>
                             <FontAwesomeIcon icon={faComment} />
@@ -68,14 +71,14 @@ export default function PainelLateral() {
                             <span>Sobre</span>
                         </a>
                     </li>
-                    
+
                     <li>
                         <a>
-                            <FontAwesomeIcon icon={faGear}/>
+                            <FontAwesomeIcon icon={faGear} />
                             <span>Configurações</span>
                         </a>
                     </li>
-                    
+
                     <li>
                         <a>
                             <FontAwesomeIcon icon={faWrench} />

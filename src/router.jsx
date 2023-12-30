@@ -1,28 +1,50 @@
+import styles from './routerApp.module.css'
 import appData from './data/apps'
 import Header from './components/Header/Header'
-import DefaultPage from './pages/DefaultPage/DefaultPage'
+import PainelLateral from './components/PainelLateral/PainelLateral'
 import Home from './pages/Home'
 import Explore from './pages/Explore'
 import AppPage from './pages/AppPage'
 import Erro404 from './pages/Erro404'
-import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { useState } from 'react'
 
 function App() {
   const [apps, setApps] = useState(appData)
 
+  const [asideShow, setAsideShow] = useState(true)
+
+  function toggleAside() {
+    setAsideShow(!asideShow)
+  }
+
   return (
     <>
       <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path='/' element={<DefaultPage />}>
-            <Route index element={<Home apps={apps} />} />
-            <Route path='/explore' element={<Explore apps={apps} />} />
-            <Route path='/app/:id' element={<AppPage apps={apps} />} />
-            <Route path='*' element={<Erro404/>} />
-          </Route>
-        </Routes>
+        
+        <PainelLateral asideShow={asideShow} />
+        
+        <button className={styles.btnSwitcher} onClick={toggleAside}>
+          <FontAwesomeIcon icon={faBars} className={`svg ${styles.botoes}`} />
+        </button>
+        
+        <div className={styles.appCorpo}>
+          <Header />
+          
+          <main>
+            <Routes>
+              <Route path='/'>
+                <Route index element={<Home apps={apps} />} />
+                <Route path='/explore' element={<Explore apps={apps} />} />
+                <Route path='/app/:id' element={<AppPage apps={apps} />} />
+                <Route path='*' element={<Erro404 />} />
+              </Route>
+            </Routes>
+          </main>
+
+        </div>
       </BrowserRouter>
     </>
   )
