@@ -1,6 +1,6 @@
 import styles from './PainelLateral.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faBriefcase, faCircleInfo, faCode, faGamepad, faGear, faStar, faWrench } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faBriefcase, faCircleInfo, faCode, faGamepad, faGear, faHouse, faStar, faWrench } from '@fortawesome/free-solid-svg-icons'
 import { faComment, faCompass } from '@fortawesome/free-regular-svg-icons'
 import { Link } from 'react-router-dom'
 
@@ -13,16 +13,16 @@ export default function PainelLateral({asideShow}) {
             <nav>
                 <menu className={styles.menu}>
                     <li>
-                        <Link to='/explore'>
-                            <FontAwesomeIcon icon={faCompass} />
-                            <span>Explorar</span>
+                        <Link to='/'>
+                            <FontAwesomeIcon icon={faHouse} />
+                            <span>Início</span>
                         </Link>
                     </li>
 
                     <li>
-                        <Link to='/'>
-                            <FontAwesomeIcon icon={faStar} />
-                            <span>Em Destaque</span>
+                        <Link to='/explore'>
+                            <FontAwesomeIcon icon={faCompass} />
+                            <span>Explorar</span>
                         </Link>
                     </li>
 

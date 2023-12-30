@@ -38,6 +38,16 @@ export default function Home({ apps }) {
                 cor1={'#352163'}
                 cor2={'#256987'}
             />
+
+            <section>
+                <h2>Categorias</h2>
+
+                <div className='cardContainer'>
+                    <div>Educação</div>
+                    <div>Produtividade</div>
+                    <div></div>
+                </div>
+            </section>
         </div>
     )
 }

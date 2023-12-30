@@ -17,4 +17,6 @@ main {
     top: 1rem;
     left: var(--pdLateral);
     font-size: 2rem;
+    z-index: 14;
+    background-color: transparent;
 }

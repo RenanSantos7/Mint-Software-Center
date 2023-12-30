@@ -1,5 +1,6 @@
 import styles from './routerApp.module.css'
 import appData from './data/apps'
+import ScrollToTop from './ScrollToTop'
 import Header from './components/Header/Header'
 import PainelLateral from './components/PainelLateral/PainelLateral'
 import Home from './pages/Home'
@@ -34,14 +35,16 @@ function App() {
           <Header />
           
           <main>
-            <Routes>
-              <Route path='/'>
-                <Route index element={<Home apps={apps} />} />
-                <Route path='/explore' element={<Explore apps={apps} />} />
-                <Route path='/app/:id' element={<AppPage apps={apps} />} />
-                <Route path='*' element={<Erro404 />} />
-              </Route>
-            </Routes>
+            <ScrollToTop>
+              <Routes>
+                <Route path='/'>
+                  <Route index element={<Home apps={apps} />} />
+                  <Route path='/explore' element={<Explore apps={apps} />} />
+                  <Route path='/app/:id' element={<AppPage apps={apps} />} />
+                  <Route path='*' element={<Erro404 />} />
+                </Route>
+              </Routes>
+            </ScrollToTop>
           </main>
 
         </div>

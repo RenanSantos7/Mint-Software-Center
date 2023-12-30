@@ -12,6 +12,8 @@
     top: 0;
     left: calc(-1.2 * var(--asideWidth));
     transition: all .6s ease-in-out;
+
+    z-index: 12;
 }
 
 .shown {
