@@ -3,6 +3,8 @@ import Header from './components/Header/Header'
 import DefaultPage from './pages/DefaultPage/DefaultPage'
 import Home from './pages/Home'
 import Explore from './pages/Explore'
+import AppPage from './pages/AppPage'
+import Erro404 from './pages/Erro404'
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
@@ -17,6 +19,8 @@ function App() {
           <Route path='/' element={<DefaultPage />}>
             <Route index element={<Home apps={apps} />} />
             <Route path='/explore' element={<Explore apps={apps} />} />
+            <Route path='/app/:id' element={<AppPage apps={apps} />} />
+            <Route path='*' element={<Erro404/>} />
           </Route>
         </Routes>
       </BrowserRouter>

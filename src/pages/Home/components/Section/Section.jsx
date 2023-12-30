@@ -5,7 +5,7 @@ import Card from '../../../../components/Card/Card'
 export default function Section({titulo, apps, cor1, cor2}) {
     
     return (
-        <section>
+        <section className={styles.section}>
             <Banner
                 titulo={titulo}
                 cor1='#800080'

@@ -1,8 +1,6 @@
 import styles from './Home.module.css'
-import Banner from './components/Banner/Banner'
-import Card from '../../components/Card/Card';
-import { useEffect, useState } from 'react';
 import Section from './components/Section/Section';
+import { useEffect, useState } from 'react';
 
 export default function Home({ apps }) {
     const [appsSorted, setAppsSorted] = useState(apps.sort(
