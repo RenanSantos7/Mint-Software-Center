@@ -1,4 +1,4 @@
-import styles from './PainelLateral.module.css'
+import styles from './Aside.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faBriefcase, faCircleInfo, faCode, faGamepad, faGear, faHouse, faStar, faWrench } from '@fortawesome/free-solid-svg-icons'
 import { faComment, faCompass } from '@fortawesome/free-regular-svg-icons'
@@ -27,38 +27,38 @@ export default function PainelLateral({asideShow}) {
                     </li>
 
                     <li>
-                        <a>
+                        <Link to='/category/development'>
                             <FontAwesomeIcon icon={faCode} />
                             <span>Desenvolvimento</span>
-                        </a>
+                        </Link>
                     </li>
 
                     <li>
-                        <a>
+                        <Link to='/category/productivity'>
                             <FontAwesomeIcon icon={faBriefcase} />
                             <span>Produtividade</span>
-                        </a>
+                        </Link>
                     </li>
 
                     <li>
-                        <a>
+                        <Link to='/category/game'>
                             <FontAwesomeIcon icon={faGamepad} />
                             <span>Jogos</span>
-                        </a>
+                        </Link>
                     </li>
 
                     <li>
-                        <a>
+                        <Link to='/category/create'>
                             <FontAwesomeIcon icon={faStar} />
                             <span>Criação</span>
-                        </a>
+                        </Link>
                     </li>
 
                     <li>
-                        <a>
+                        <Link to='/category/comunication'>
                             <FontAwesomeIcon icon={faComment} />
                             <span>Social</span>
-                        </a>
+                        </Link>
                     </li>
                 </menu>
             </nav>

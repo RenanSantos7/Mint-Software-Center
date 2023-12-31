@@ -52,6 +52,11 @@ a {
     cursor: pointer;
 }
 
+.pageContainer {
+    width: min(900px, 100%);
+    margin: 0 auto;
+}
+
 .cardContainer {
     display: flex;
     gap: 2rem;

@@ -1,5 +1,6 @@
 import styles from './Home.module.css'
 import Section from './components/Section/Section';
+import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 export default function Home({ apps }) {
@@ -22,7 +23,7 @@ export default function Home({ apps }) {
     }, [])
 
     return (
-        <div className={styles.homeContainer}>
+        <div className='pageContainer'>
             <Section
                 key='maisBaixados'
                 titulo='Mais baixados'
@@ -39,13 +40,20 @@ export default function Home({ apps }) {
                 cor2={'#256987'}
             />
 
-            <section>
-                <h2>Categorias</h2>
+            <section className={styles.categories}>
+                <h2 className={styles.categoriesTitle}>Categorias</h2>
 
                 <div className='cardContainer'>
-                    <div>Educação</div>
-                    <div>Produtividade</div>
-                    <div></div>
+                    <Link to='category/education' className={styles.categoryLnk}>Educação</Link>
+                    <Link to='category/create' className={styles.categoryLnk}>Criação</Link>
+                    <Link to='category/productivity' className={styles.categoryLnk}>Produtividade</Link>
+                    <Link to='category/development' className={styles.categoryLnk}>Desenvolvimento</Link>
+                    <Link to='category/comunication' className={styles.categoryLnk}>Comunicação</Link>
+                    <Link to='category/game' className={styles.categoryLnk}>Jogos</Link>
+                    <Link to='category/web' className={styles.categoryLnk}>Web</Link>
+                    <Link to='category/office' className={styles.categoryLnk}>Escritório</Link>
+                    <Link to='category/finances' className={styles.categoryLnk}>Finanças</Link>
+                    <Link to='category/comunication' className={styles.categoryLnk}>Comunicação</Link>
                 </div>
             </section>
         </div>

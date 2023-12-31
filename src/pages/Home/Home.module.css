@@ -1,4 +1,22 @@
-.homeContainer {
-    width: min(900px, 100%);
-    margin: 0 auto;
+.categories {
+    margin-bottom: 2rem;
+}
+
+.categoriesTitle {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.categoryLnk {
+    border: 1px solid var(--borda);
+    background-color: var(--bgCard);
+    padding: .5rem 1rem;
+    border-radius: 5rem;
+    transition: all .6s ease-in-out;
+}
+
+.categoryLnk:hover {
+    background-color: var(--accentColor);
+    color: white;
 }

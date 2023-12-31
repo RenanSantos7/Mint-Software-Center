@@ -60,13 +60,14 @@
     margin-bottom: 1rem;
 }
 
-.app__description p {
+.app__description p,
+.app__description li {
     margin-bottom: 1rem;
     line-height: 1.5;
 }
 
 .app__changelog ul {
-    list-style: initial;
+    list-style: disc;
     margin-left: 1rem;
 }
 
