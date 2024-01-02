@@ -62,31 +62,6 @@ export default function PainelLateral({asideShow}) {
                     </li>
                 </menu>
             </nav>
-
-            <nav className={styles.inferior}>
-                <menu className={styles.menu}>
-                    <li>
-                        <a>
-                            <FontAwesomeIcon icon={faCircleInfo} />
-                            <span>Sobre</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a>
-                            <FontAwesomeIcon icon={faGear} />
-                            <span>Configurações</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a>
-                            <FontAwesomeIcon icon={faWrench} />
-                            <span>Gerenciamento de apps</span>
-                        </a>
-                    </li>
-                </menu>
-            </nav>
         </aside>
     )
 }

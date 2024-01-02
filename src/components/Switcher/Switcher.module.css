@@ -1,52 +1,62 @@
-.switcherContainer {
-	position: relative;
+.switcher__container {
+	--button-width: calc(var(--size) * 1.5);
+	--button-height: var(--size);
+	--toggle-diameter: calc(var(--button-height) * 0.8);
+	--button-toggle-offset: calc((var(--button-height) - var(--toggle-diameter)) / 2);
+	--toggle-shadow-offset: 10px;
+	--toggle-wider: 3em;
+	--color-grey: #cccccc;
+
+	display: flex;
+	gap: .5rem;
+	height: 1.8rem;
+}
+
+.switcher__slider {
 	display: inline-block;
-	padding: 13px 30px 13px 13px;
-	width: var(--size);
-	height: calc(var(--size) * 0.51);
+	width: var(--button-width);
+	height: var(--button-height);
+	background-color: var(--color-grey);
+	border-radius: calc(var(--button-height) / 2);
+	position: relative;
+	transition: 0.3s all ease-in-out;
 }
 
-.switcherInput {
-	opacity: 0;
-	width: 0;
-	height: 0;
-}
-
-.switcherSlider {
+.switcher__slider::after {
+	content: '';
+	display: inline-block;
+	width: var(--toggle-diameter);
+	height: var(--toggle-diameter);
+	background-color: #fff;
+	border-radius: calc(var(--toggle-diameter) / 2);
 	position: absolute;
-	cursor: pointer;
-	top: 5px;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: var(--cinza-claro);
-	transition: 0.4s;
-	border-radius: 34px;
-	height: calc(0.5 * var(--size));
-	width: 50px;
+	top: var(--button-toggle-offset);
+	transform: translateX(var(--button-toggle-offset));
+	box-shadow: var(--toggle-shadow-offset) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+	transition: 0.3s all ease-in-out;
 }
 
-.switcherInner {
-	position: absolute;
-	height: 20px;
-	width: 20px;
-	left: 5px;
-	bottom: 5px;
-	background-color: var(--branco);
-	transition: 0.4s;
-	border-radius: 50%;
+.switcher__input:checked + switcher__slider {
+	background-color: var(--accentColor);
 }
 
-.switcherInput:checked + .switcherSlider {
-	background-color: var(--azul-destaque-light);
+.switcher__input:checked + switcher__slider::after {
+	transform: translateX(calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)));
+	box-shadow: calc(var(--toggle-shadow-offset) * -1) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
 }
 
-.switcherInput:focus + .switcherSlider {
-	box-shadow: 0 0 1px var(--cinza-claro);
+.switcher__input {
+	display: none;
 }
 
-.switcherInput:checked + .switcherInner {
-	-webkit-transform: translateX(21px);
-	-ms-transform: translateX(21px);
-	transform: translateX(21px);
+.switcher__input:active + switcherSlider::after {
+	width: var(--toggle-wider);
+}
+
+.switcher__input:checked:active + switcher__slider::after {
+	transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)));
+}
+
+.switcher__label {
+	color: var(--texto);
 }

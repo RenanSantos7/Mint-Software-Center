@@ -1,0 +1,40 @@
+.menu {
+    position: absolute;
+    right: -1.2rem;
+    
+    background-color: var(--bgGeral);
+    border: 1px solid var(--borda);
+    border-radius: .5rem;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    font-size: .9rem;
+    overflow: hidden;
+    
+    top: -20px;
+    height: 10px;
+    display: none;
+    transition: display 0 linear 1ms, top .3s ease-in-out .2s, height .6s ease-in-out .3s;
+}
+
+.menu.shown {
+    top: calc(var(--altBarraSuperior) / 1.5);
+    height: unset;
+    display: block;
+}
+
+.menu hr {
+    background-color: var(--borda);
+    height: 1px;
+    width: 100%;
+    margin-block: 1rem;
+}
+
+.menu__item {
+    display: flex;
+    gap: .5rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    min-width: 20rem;
+    line-height: 1.2;
+    margin-bottom: 1em;
+}

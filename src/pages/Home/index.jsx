@@ -18,9 +18,9 @@ export default function Home({ apps }) {
         apps.filter(app => app.categories.includes('editor'))
     )
 
-    useEffect(() => {
-        console.log(appsEditorsChoice)
-    }, [])
+    // useEffect(() => {
+    //     console.log(appsEditorsChoice)
+    // }, [])
 
     return (
         <div className='pageContainer'>

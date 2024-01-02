@@ -9,8 +9,8 @@
     --accentColor: forestgreen;
     --red: #ff0000;
 
-    --texto: ;
-    --titulo: ;
+    --texto: #101010;
+    --titulo: black;
 
     --asideWidth: 200px;
     --pdLateral: 18px;
@@ -30,7 +30,7 @@
         --red: #fa6b6b;
 
         --texto: #d8d8d8;
-        --titulo: ;
+        --titulo: white;
     }
 
     .svg {
