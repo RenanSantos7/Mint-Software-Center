@@ -1,9 +1,17 @@
 import styles from './Home.module.css'
 import Section from './components/Section/Section';
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { AppsContext } from '@/context/AppsContext';
 
-export default function Home({ apps }) {
+export default function Home() {
+
+    const {apps,_} = useContext(AppsContext)
+
+    /* useEffect(() => {
+        console.log(apps)
+    }, []) */
+
     const [appsSorted, setAppsSorted] = useState(apps.sort(
         (a, b) => {
             return a.downloadNumber > b.downloadNumber ? -1 : a.downloadNumber < b.downloadNumber ? 1 : 0;
@@ -17,11 +25,7 @@ export default function Home({ apps }) {
     const [appsEditorsChoice, setEditorsChoice] = useState(
         apps.filter(app => app.categories.includes('editor'))
     )
-
-    // useEffect(() => {
-    //     console.log(appsEditorsChoice)
-    // }, [])
-
+ 
     return (
         <div className='pageContainer'>
             <Section

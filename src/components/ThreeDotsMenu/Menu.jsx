@@ -6,9 +6,11 @@ import { faArrowsSpin, faCircleInfo, faGear, faShapes, faWrench } from '@fortawe
 export default function ThreeDotsMenu({shown}) {
     return (
         <menu className={`${styles.menu} ${shown ? styles.shown : ''}`}>
-            <li className={styles.menu__item}>
-                <FontAwesomeIcon icon={faShapes} />
-                <span>Gerenciar aplicativos instalados</span>
+            <li>
+                <a className={styles.menu__item}>
+                    <FontAwesomeIcon icon={faShapes} />
+                    <span>Gerenciar aplicativos instalados</span>
+                </a>
             </li>
 
             <hr />

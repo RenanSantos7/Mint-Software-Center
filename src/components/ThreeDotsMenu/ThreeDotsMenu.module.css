@@ -12,14 +12,16 @@
     
     top: -20px;
     height: 10px;
-    display: none;
-    transition: display 0 linear 1ms, top .3s ease-in-out .2s, height .6s ease-in-out .3s;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .1s ease, top .2s ease-in-out, height .6s ease-in-out .3s;
 }
 
 .menu.shown {
     top: calc(var(--altBarraSuperior) / 1.5);
     height: unset;
-    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 .menu hr {

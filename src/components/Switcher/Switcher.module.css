@@ -1,7 +1,7 @@
 .switcher__container {
 	--button-width: calc(var(--size) * 1.5);
 	--button-height: var(--size);
-	--toggle-diameter: calc(var(--button-height) * 0.8);
+	--toggle-diameter: calc(var(--button-height) * 0.6);
 	--button-toggle-offset: calc((var(--button-height) - var(--toggle-diameter)) / 2);
 	--toggle-shadow-offset: 10px;
 	--toggle-wider: 3em;
@@ -36,11 +36,11 @@
 	transition: 0.3s all ease-in-out;
 }
 
-.switcher__input:checked + switcher__slider {
+.switcher__input:checked + .switcher__slider {
 	background-color: var(--accentColor);
 }
 
-.switcher__input:checked + switcher__slider::after {
+.switcher__input:checked + .switcher__slider::after {
 	transform: translateX(calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)));
 	box-shadow: calc(var(--toggle-shadow-offset) * -1) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
 }
@@ -49,11 +49,11 @@
 	display: none;
 }
 
-.switcher__input:active + switcherSlider::after {
+.switcher__input:active + .switcher__slider::after {
 	width: var(--toggle-wider);
 }
 
-.switcher__input:checked:active + switcher__slider::after {
+.switcher__input:checked:active + .switcher__slider::after {
 	transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)));
 }
 

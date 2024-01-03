@@ -1281,7 +1281,7 @@ const appData = [
 		categories: ['media', 'system'],
 	},
 	{
-		id: 79,
+		id: 80,
 		name: 'darktable',
 		developer: '',
 		icon: 'https://dl.flathub.org/repo/appstream/x86_64/icons/128x128/org.darktable.Darktable.png',
@@ -1297,7 +1297,7 @@ const appData = [
 		categories: ['media'],
 	},
 	{
-		id: 80,
+		id: 81,
 		name: 'Shotwell',
 		developer: 'The Shotwell developers',
 		icon: 'https://dl.flathub.org/repo/appstream/x86_64/icons/128x128/org.gnome.Shotwell.png',
@@ -1313,7 +1313,7 @@ const appData = [
 		categories: ['media'],
 	},
 	{
-		id: 81,
+		id: 82,
 		name: 'Eye of GNOME',
 		developer: '',
 		icon: 'https://dl.flathub.org/repo/appstream/x86_64/icons/128x128/org.gnome.eog.png',
@@ -1329,7 +1329,7 @@ const appData = [
 		categories: ['media'],
 	},
 	{
-		id: 82,
+		id: 83,
 		name: 'Scribus',
 		developer: '',
 		icon: 'https://dl.flathub.org/repo/appstream/x86_64/icons/128x128/net.scribus.Scribus.png',
@@ -1345,7 +1345,7 @@ const appData = [
 		categories: ['media', 'create'],
 	},
 	{
-		id: 83,
+		id: 84,
 		name: 'Dolphin Emulator',
 		developer: '',
 		icon: 'https://dl.flathub.org/repo/appstream/x86_64/icons/128x128/org.DolphinEmu.dolphin-emu.png',
@@ -1361,7 +1361,7 @@ const appData = [
 		categories: ['game'],
 	},
 	{
-		id: 84,
+		id: 85,
 		name: 'PrimeHack',
 		developer: 'Shiiion, SirMangler',
 		icon: 'https://dl.flathub.org/repo/appstream/x86_64/icons/128x128/io.github.shiiion.primehack.png',
@@ -1377,7 +1377,7 @@ const appData = [
 		categories: ['game'],
 	},
 	{
-		id: 85,
+		id: 86,
 		name: 'Lutris',
 		developer: 'Lutris Team',
 		icon: 'https://dl.flathub.org/repo/appstream/x86_64/icons/128x128/net.lutris.Lutris.png',
@@ -1393,7 +1393,7 @@ const appData = [
 		categories: ['game', 'editor'],
 	},
 	{
-		id: 86,
+		id: 87,
 		name: 'Heroic Games Launcher',
 		developer: '',
 		icon: 'https://dl.flathub.org/repo/appstream/x86_64/icons/128x128/com.heroicgameslauncher.hgl.png',
@@ -1409,7 +1409,7 @@ const appData = [
 		categories: ['game', 'editor'],
 	},
 	{
-		id: 87,
+		id: 88,
 		name: 'Spotify',
 		developer: 'Spotify',
 		icon: 'https://dl.flathub.org/repo/appstream/x86_64/icons/128x128/com.spotify.Client.png',
@@ -1425,7 +1425,7 @@ const appData = [
 		categories: ['media'],
 	},
 	{
-		id: 88,
+		id: 89,
 		name: 'Apostrophe',
 		developer: 'Manuel G., Wolf V.',
 		icon: 'https://dl.flathub.org/repo/appstream/x86_64/icons/128x128/org.gnome.gitlab.somas.Apostrophe.png',
@@ -1441,7 +1441,7 @@ const appData = [
 		categories: ['media', 'editor'],
 	},
 	{
-		id: 89,
+		id: 90,
 		name: 'Denaro',
 		developer: 'Nickvision',
 		icon: 'https://dl.flathub.org/repo/appstream/x86_64/icons/128x128/org.nickvision.money.png',
@@ -1457,7 +1457,7 @@ const appData = [
 		categories: ['finances'],
 	},
 	{
-		id: 90,
+		id: 91,
 		name: 'TradeSim',
 		developer: 'Horacio Daniel Ros',
 		icon: 'https://dl.flathub.org/repo/appstream/x86_64/icons/128x128/com.github.horaciodrs.tradesim.png',
@@ -1473,7 +1473,7 @@ const appData = [
 		categories: ['finances'],
 	},
 	{
-		id: 91,
+		id: 92,
 		name: 'Moneta',
 		developer: 'Matheus Fantinel',
 		icon: 'https://dl.flathub.org/repo/appstream/x86_64/icons/128x128/com.github.matfantinel.moneta.png',
@@ -1489,7 +1489,7 @@ const appData = [
 		categories: ['finances'],
 	},
 	{
-		id: 92,
+		id: 93,
 		name: 'GnuCash',
 		developer: 'GnuCash Project',
 		icon: 'https://dl.flathub.org/repo/appstream/x86_64/icons/128x128/org.gnucash.GnuCash.png',
@@ -1505,7 +1505,7 @@ const appData = [
 		categories: ['finances'],
 	},
 	{
-		id: 93,
+		id: 94,
 		name: 'Widelands',
 		developer: 'The Widelands Development Team',
 		icon: 'https://dl.flathub.org/repo/appstream/x86_64/icons/128x128/org.widelands.Widelands.png',
@@ -1521,7 +1521,7 @@ const appData = [
 		categories: ['game'],
 	},
 	{
-		id: 94,
+		id: 95,
 		name: 'XnConvert',
 		developer: 'Pierre-e Gougelet',
 		icon: 'https://dl.flathub.org/repo/appstream/x86_64/icons/128x128/com.xnview.XnConvert.png',
