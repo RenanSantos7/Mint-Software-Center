@@ -1,52 +1,30 @@
 import styles from './AppPage.module.css'
-import './embla.css'
 import DefaultButton from '../../components/DefaultButton/DefaultButton'
 import Erro404 from '../Erro404'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-    faChevronLeft,
-    faChevronRight,
     faCloudArrowDown,
     faDownload,
     faHardDrive,
     faLaptopCode
 } from '@fortawesome/free-solid-svg-icons'
-import useEmblaCarousel from 'embla-carousel-react'
 import { useParams } from 'react-router-dom'
-import { useCallback, useState } from 'react'
+import { useContext, useState } from 'react'
+import { AppsContext } from '../../context/AppsContext'
+import Carrossel from './components/Carrossel/Carrossel'
 import Card from '../../components/Card/Card'
 
-export default function AppPage({ apps }) {
+export default function AppPage() {
     const parametros = useParams()
+
+    const { apps } = useContext(AppsContext)
 
     const app = apps.find(app => {
         return app.id === Number(parametros.id)
     })
 
-    if (!app) {
-        return <Erro404 />
-    }
-
     const description = { __html: app.description }
     const changelog = { __html: app.changelog }
-    const [emblaRef, emblaApi] = useEmblaCarousel(
-        {
-            loop: false,
-            skipSnaps: true
-        }
-    )
-
-    const scrollPrev = useCallback(() => {
-        if (emblaApi) {
-            emblaApi.scrollPrev()
-        }
-    }, [emblaApi])
-
-    const scrollNext = useCallback(() => {
-        if (emblaApi) {
-            emblaApi.scrollNext()
-        }
-    }, [emblaApi])
 
     function filterSimilar(array) {
         for (let element of array) {
@@ -54,13 +32,15 @@ export default function AppPage({ apps }) {
                 return true;
             }
         }
-        
+
         return false;
     }
 
-    const [appsSimilar,setAppsSimilar] = useState(
-        apps.filter(similar => filterSimilar(similar.categories)).slice(0,4)
+    const [appsSimilar, setAppsSimilar] = useState(
+        apps.filter(similar => filterSimilar(similar.categories)).slice(0, 4)
     )
+
+    if (!app) return <Erro404 />
 
     return (
         <div className={styles.appContainer}>
@@ -80,27 +60,7 @@ export default function AppPage({ apps }) {
                 <DefaultButton>Instalar</DefaultButton>
             </header>
 
-            <section className="embla" ref={emblaRef}>
-                <div className='embla__viewport'>
-                    <div className="embla__container">
-                        {app.screenshots.map((screenshot, index) => {
-                            return (
-                                <img key={index} className='embla__slide' src={screenshot} alt={`${app.name} screenshot`} />
-                            )
-                        })}
-                    </div>
-                </div>
-                <div className='embla__prev__wrapper'>
-                    <button className="embla__prev" onClick={scrollPrev}>
-                        <FontAwesomeIcon icon={faChevronLeft} />
-                    </button>
-                </div>
-                <div className='embla__next__wrapper'>
-                    <button className="embla__next" onClick={scrollNext}>
-                        <FontAwesomeIcon icon={faChevronRight} />
-                    </button>
-                </div>
-            </section>
+            <Carrossel app={app} />
 
             <section className={styles.app__description} dangerouslySetInnerHTML={description}>
             </section>
@@ -144,7 +104,7 @@ export default function AppPage({ apps }) {
                 <div className='cardContainer'>
                     {appsSimilar.map(
                         app => {
-                            return <Card app={app} />
+                            return <Card app={app} key={app.id} />
                         }
                     )}
                 </div>

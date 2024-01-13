@@ -1,0 +1,54 @@
+.embla {
+	overflow: hidden;
+	z-index: 0;
+	position: relative;
+}
+
+.embla__container {
+	display: flex;
+	gap: 2rem;
+}
+
+.embla__slide {
+	flex: 0 0 85%;
+	min-width: 0;
+}
+
+.embla__prev,
+.embla__next {
+	position: absolute;
+	top: 50%;
+	padding: 1rem;
+	border-radius: 50%;
+	background-color: var(--bgCard);
+}
+.embla__prev__wrapper,
+.embla__next__wrapper {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 50px;
+	opacity: 0.2;
+	transition: all 0.3s ease-in-out;
+}
+
+.embla__next__wrapper {
+	right: 0;
+}
+
+.embla__next {
+	right: 0;
+}
+
+.embla__prev__wrapper:hover,
+.embla__next__wrapper:hover {
+	opacity: 1;
+}
+
+.embla__prev__wrapper:hover {
+	background: linear-gradient(to right, #00000025, transparent);
+}
+
+.embla__next__wrapper:hover {
+	background: linear-gradient(to left, #00000025, transparent);
+}

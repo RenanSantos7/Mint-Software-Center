@@ -13,7 +13,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import { AppsProvider } from './context/AppsContext'
 
-function App() {
+export default function App() {
 
   const [asideShow, setAsideShow] = useState(true)
 
@@ -55,5 +55,3 @@ function App() {
     </>
   )
 }
-
-export default App

@@ -37,6 +37,10 @@ npm run dev
 
 Digite a letra 'o' e aperte 'Enter'. O navegador será aberto no endereço `http://localhost:5173` (esse é o endereço padrão, mas pode ser outro dependendo das suas configurações) para que você possa visualizá-lo.
 
+## Dados
+
+Os dados sobre os aplicativos foram retirados manualmente do site do Flathub, usando a função `data/script pega objeto.js`
+
 ## Licensa
 
 O projeto está disponível publicamente com a licença [MIT](./LICENSE)

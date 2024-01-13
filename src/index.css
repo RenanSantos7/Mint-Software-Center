@@ -7,6 +7,7 @@
     --bgAside: #e7e7e7;
     --borda: #ededed;
     --accentColor: forestgreen;
+    --swiper-theme-color: var(--accentColor);
     --red: #ff0000;
 
     --texto: #101010;

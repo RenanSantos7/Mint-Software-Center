@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-
 function pegaInfosApp() {
 	const elname = document.querySelector('h1')
 	const name = elname ? elname.textContent : ''
