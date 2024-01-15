@@ -1,7 +1,7 @@
 
-<!-- `![Print do Banner](./public/assets/print-banner.png)` 
+`![Print do Banner](./public/assets/print-banner.png)` 
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c35b940e-65e2-4ee5-bd21-2b82c7d97a72/deploy-status)](https://app.netlify.com/sites/ola-mundo-alura/deploys)-->
+[![Netlify Status](https://api.netlify.com/api/v1/badges/85ee2fc8-b16a-4192-a1b7-da8acaa881ac/deploy-status)](https://app.netlify.com/sites/frolicking-kangaroo-39172e/deploys)
 
 # Mint Software Center
 
@@ -12,12 +12,12 @@ Mockup feito em React como uma ideia para atualização da interface da loja de 
 - React 
 - Vite
 - React Router DOM
-- Font Awesome
-- embla carousel
+- Font Awesome para os ícones
+- Swiperjs para carrosseis.
 
-<!-- ## Como acessar online
+## Como acessar online
 
-Ainda não fiz deploy do projeto. -->
+O projeto pode ser acessado em [https://mintsoftware.netlify.app/](https://mintsoftware.netlify.app/)
 
 ## Como rodar localmente
 
@@ -29,9 +29,10 @@ No caso, primeiro você precisará baixar o projeto com o seguinte comando:
 git clone https://github.com/RenanSantos7/Mint-Software-Center.git
 ```
 
-Agora, navegue até a raiz do projeto e abra um terminal. Nele rode o seguinte comando:
+Agora, navegue até a raiz do projeto e abra um terminal. Nele rode os seguintes comandos:
 
 ```bash
+npm i
 npm run dev
 ```
 
